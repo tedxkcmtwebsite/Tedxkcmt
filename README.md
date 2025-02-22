@@ -1,28 +1,15 @@
-# TEDxKCMT Club Website
+# TEDxKCMT
 
-Welcome to the official repository for the **TEDxKCMT Club Website**! This project was created to showcase the details and spirit of our upcoming TEDx event, using the skills I've recently learned in web development.  
-**Note: The website is still under construction.**
+Welcome to the official repository for the **TEDxKCMT Website**! This project was created to showcase the details and spirit of TEDxKCMT and our upcomming events.
 
 ## 🌟 Features
 - **HTML & CSS**: A clean and responsive design built with fundamental web technologies.
-- **CSS Animations**: Dynamic effects to enhance the visual appeal, inspired by tutorials from YouTube.
-
-## 🎯 Purpose
-This website serves as an information hub for the TEDxKCMT event while reflecting my growing web development skills. It's a practical application of concepts I’ve learned, including:
-- Structuring content with **HTML**.
-- Styling and layout design with **CSS**.
-- Adding interactivity with **CSS animations**.
+- **CSS Animations**: Dynamic effects to enhance the visual appeal
 
 ## 🛠️ Tools & Technologies
 - **HTML5** for structuring the content.
 - **CSS3** for styling and animations.
 
-## 📚 Learning Journey  
-Building this website has been an exciting experience! I explored:  
-- Creating responsive designs.  
-- Using CSS animations to make the site more engaging.  
-- Structuring a project with a focus on clarity and simplicity.  
-- Applying concepts from the **NxtWave Full Stack Web Development course**, which helped me strengthen my understanding of web development fundamentals.
 
 ## 📸 Preview
 Here’s a sneak peek of the website:  
@@ -31,14 +18,8 @@ Here’s a sneak peek of the website:
 
 
 ## 🙌 Acknowledgments
-- Special thanks to **YouTube creators** for their tutorials on CSS animations.
-- TEDxKCMT for the opportunity to contribute to this project.
+- Special thanks to Sijomon P.S for his work on this project (https://github.com/sijomonps)
 
 ## 📬 Contact
-Feel free to reach out for collaboration or feedback:
-- **Email**: sijomon700@gmail.com
-- **GitHub**: https://github.com/sijomonps
-
----
-
-Thank you for checking out this project! 😊
+For collaborations or feedback:
+- Email: tedxkcmtwebsite@gmail.com
