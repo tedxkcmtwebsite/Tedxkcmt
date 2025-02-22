@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 50px;
+        fill: #eb0028;
+        text-anchor: middle;
+        font-family: "Helvetica Now Display";
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="X" class="cls-1" transform="translate(149.998 298.687) scale(8.357)"><tspan x="0">X</tspan></text>
+</svg>
