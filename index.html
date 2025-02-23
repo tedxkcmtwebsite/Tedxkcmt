@@ -3,58 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!--Title-->
+  <meta name="description" content="Join TEDxKCMT for an inspiring event celebrating unique voices shaping our society.">
+  <meta property="og:title" content="TEDxKCMT - Misfits">
+  <meta property="og:description" content="Experience thought-provoking talks and discussions at TEDxKCMT.">
+  <meta property="og:image" content="./Images/tedx-banner.jpg">
+  <meta property="og:type" content="website">
   <title>TEDxKCMT</title>
-  <link rel="stylesheet" href="tedx.min.css">
+  <link rel="stylesheet" href="tedx.css">
 
-  <!-- Google Fonts-->
+  <!-- Google Fonts (Optimized for Performance) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Combined font preload -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lalezar&family=Bebas+Neue&family=Dela+Gothic+One&display=swap" rel="stylesheet">
-
-  <!-- Favicon link-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lalezar&family=Bebas+Neue&family=Dela+Gothic+One&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  
+  <!-- Favicon -->
   <link rel="icon" href="./Images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  
   <header class="header">
     <div class="container">
-      <!--Nav-->
       <nav class="navbar">
         <div class="logo">
-          <img class="nav-logo" src=".Images/logo-white.png" alt="">
+          <img class="nav-logo" src="./Images/logo-white.png" alt="TEDxKCMT Logo">
         </div>
-        <div>
-          <a href="./event-details.html#event-details-section">
-            <button class = "nav-elements">Event Details</button>
-          </a>
-          <a href="./event-details.html#about-us-section">
-            <button class = "nav-elements">About Us</button>
-          </a>
-          <a href="./event-details.html#contact-us-section">
-            <button class = "nav-elements">Contact Us</button>
-          </a>
-          <a href="https://forms.gle/Tgc5LuukZ8GzSuCP7">
-            <button class = "top-button">Grab your tickets!</button>
-          </a>
-        </div>
-        <!--DropDown-->
-        <div class="drop-down btn-group drop-down-button">
-          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Open navigation menu" >
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-            <a href="event-details.html#event-details-section">
-              <li><button class="dropdown-item dropdown" type="button">Event Details</button></li>
-            </a>
-            <a href="event-details.html#about-us-section">
-              <li><button class="dropdown-item dropdown" type="button">About Us</button></li>
-            </a>
-            <a href="event-details.html#contact-us-section">
-              <li><button class="dropdown-item dropdown" type="button">Contact Us</button></li>
-            </a>
-          </ul>
+        <div class="nav-links">
+          <a href="./event-details.html#event-details-section" class="nav-elements">Event Details</a>
+          <a href="./event-details.html#about-us-section" class="nav-elements">About Us</a>
+          <a href="./event-details.html#contact-us-section" class="nav-elements">Contact Us</a>
+          <a href="https://forms.gle/Tgc5LuukZ8GzSuCP7" class="top-button">Grab your tickets!</a>
         </div>
       </nav>
     </div>
@@ -62,19 +38,20 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1  class="hero-title"><span>TED<sup>x</sup></span> KCMT</h1>
-      <p class="hero-subtitle"> Misfits celebrates the unique voices that shape our society.</p>
+      <h1 class="hero-title"><span>TED<sup>x</sup></span> KCMT</h1>
+      <p class="hero-subtitle">Misfits celebrates the unique voices that shape our society.</p>
       <a href="event-details.html" class="cta-button">Get Started</a>
     </div>
   </section>
 
   <footer class="footer">
-    <center>© 2025 TEDxKCMT.</center>
+    <p>© 2025 TEDxKCMT.</p>
+  </footer>
 
-  <!--Boostrap-->
+  <!-- Bootstrap JS (Deferred for Performance) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 
-  <!-- FontAwesome for icons -->
+  <!-- FontAwesome for icons (Deferred) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 </body>
 </html>
