@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Join us for TEDxKCMT Misfits at Kristu Jyoti College! An inspiring event celebrating creativity, 
-    innovation, and individuality through thought-provoking talks and performances. Get your tickets now!">
     <title>Event Details</title>
-    
+
     <!-- CSS Link -->
-    <link rel="stylesheet" href="tedx.min.css">
+    <link rel="stylesheet" href="tedx.css">
+
+    <!-- Link to Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Bebas+Neue&family=Dela+Gothic+One&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
     <!-- Favicon Link -->
-    <link rel="icon" href="./Images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./Images/favicon.png" type="image/png">
+
+    <!-- arun editings -->
+    <link rel="stylesheet" href="sliderandothers.css">
+
+    <!-- Bootstrap Icons -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> -->
+
+
 </head>
+
 <body>
     <!-- Header Section -->
     <header class="header">
@@ -25,11 +44,13 @@
             <div class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                        <img class="nav-logo" src="./Images/logo-white.avif" height="40px" width="150px" alt="Event Logo">
+                        <img class="nav-logo" src="./Images/logo-white.png" alt="Event Logo">
                     </a>
                 </div>
                 <ul class="nav-links">
-                    <a href="https://forms.gle/Tgc5LuukZ8GzSuCP7" class="top-button">Grab your tickets!</a>
+                    <a href="https://forms.gle/Tgc5LuukZ8GzSuCP7">
+                        <button class="top-button">Get Your Tickets!</button>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -41,7 +62,8 @@
             <h1 class="hero-title2">miS<span>FIts</span></h1>
             <p class="hero-subtitle2">Unlock the world of MISFIT - Grab your ticket today!</p>
             <div>
-                <a href="https://forms.gle/Tgc5LuukZ8GzSuCP7" class="cta-button">Get Your Tickets Now</a>
+                <a href="form.html" class="cta-button">Get Your Tickets Now</a>
+                <a href="#slider-container" class="cta-button">know about speakers</a>
                 <div class="scroll-icon">
                     <center>
                         <p class="scroll-p">Scroll to see more</p>
@@ -49,7 +71,7 @@
                     </center>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -62,46 +84,68 @@
         </div>
         <div class="container-flex">
             <div class="container-first ">
-                <p class="heading-details">Date : <span class="span-sub">March <span style="color: red;">08</span>, 2025</span></p>
-                <p class="heading-details">Time :<span class="span-sub"> 9:30am To 3:30pm</span></p>
+                <p class="heading-details">Date : <span class="span-sub">March <span style="color: red;">08</span>,
+                        2025</span></p>
+                <p class="heading-details">Time :<span class="span-sub"> --</span></p>
                 <p class="heading-details">Location :
                     <span class="span-sub">
-                       Kristu Jyoti College<br>
-                       Chethipuzha, Changanacherry, Kottayam</p>
-                    </span> 
+                        Kristu Jyoti College<br>
+                        Chethipuzha, Changanacherry, Kottayam
+                </p>
+                </span>
             </div>
             <div class="container1-para">
                 <p class="para-container1">
-                    <span class="heading-details" style="color: white;">Description : </span>  Get ready for <span style="color: red;">Misfits: Where the Unconventional Belongs</span> at Kristu Jyoti College of Management and 
-                    Technology! This event celebrates uniqueness, creativity, and bold thinking through inspiring talks, workshops, and 
-                    performances. Explore how embracing differences leads to innovation, personal growth, and social change. Join a community
-                     that values individuality and dares to redefine possibilities!
+                    <span class="heading-details" style="color: white;">Description : </span> Get ready for <span
+                        style="color: red;">Misfits</span>: Where the Unconventional Belongs at Kristu Jyoti College of
+                    Management and
+                    Technology! This event celebrates uniqueness, creativity, and bold thinking through inspiring talks,
+                    workshops, and
+                    performances. Explore how embracing differences leads to innovation, personal growth, and social
+                    change. Join a community
+                    that values individuality and dares to redefine possibilities!
                 </p>
             </div>
         </div>
     </div>
-        
+
     <hr class="new1">
+
+    <!-- Image slider -->
+    <div class="slider-container" id="slider-container">
+
+        <div class="slider" id="imageSlider">
+            <!-- Images will be inserted here dynamically -->
+        </div>
+        <button class="arrow prev" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow next" onclick="nextSlide()">&#10095;</button>
+
+    </div>
 
     <!-- Why Attend Section -->
     <div class="container2 ">
         <h1 class="container2-heading ">Why Should You Attend a <span class="ted">TEDx</span> Event?</h1>
         <p class="container2-subheading ">
-            TEDx events are a gateway to exploring new ideas and expanding your horizons. It’s an opportunity to listen to speakers 
-            who challenge conventional thinking and inspire innovation. Beyond the talks, TEDx events bring together a community of 
-            curious minds, fostering meaningful conversations and connections. It’s not just an event; it’s an experience that leaves 
+            TEDx events are a gateway to exploring new ideas and expanding your horizons. It’s an opportunity to listen
+            to speakers
+            who challenge conventional thinking and inspire innovation. Beyond the talks, TEDx events bring together a
+            community of
+            curious minds, fostering meaningful conversations and connections. It’s not just an event; it’s an
+            experience that leaves
             you motivated and ready to take on the world with fresh perspectives.
         </p>
     </div>
-    
-<!-- Container inside border -->
+
+    <!-- Container inside border -->
     <div class="container-main">
         <!-- About TED Section -->
         <div class="container3 phone">
             <h1 class="container3-heading "><span class="ted">TED</span></h1>
             <p class="container2-subheading ">
-                TED, a nonprofit dedicated to "ideas worth spreading," shares transformative insights through short, impactful talks on 
-                Technology, Entertainment, and Design. With over 3 billion annual viewers, TED connects global audiences to innovators 
+                TED, a nonprofit dedicated to "ideas worth spreading," shares transformative insights through short,
+                impactful talks on
+                Technology, Entertainment, and Design. With over 3 billion annual viewers, TED connects global audiences
+                to innovators
                 and experts, inspiring change and fostering knowledge that matters.
             </p>
         </div>
@@ -110,60 +154,85 @@
         <div id="about-us-section" class="container4 phone">
             <h1 class="container4-heading "> <span class="ted">TEDx</span></h1>
             <p class="container2-subheading ">
-                TEDx, inspired by TED's mission of sharing "ideas worth spreading," brings transformative ideas to local communities. 
-                It encourages students to think beyond textbooks, fostering curiosity, innovation, and open-minded learning.
+                TEDx, inspired by TED's mission of sharing "ideas worth spreading," brings transformative ideas to local
+                communities.
+                It encourages students to think beyond textbooks, fostering curiosity, innovation, and open-minded
+                learning.
             </p>
         </div>
-        
+
         <!-- About TEDxKCMT Section -->
         <div class="container5 phone">
             <h1 class="container5-heading"><span class="ted">TEDx</span>KCMT</h1>
             <p class="container2-subheading">
-                <b>TEDxKCMT</b>, hosted by Kristu Jyoti College of Management and Technology, is Kerala's first institution to host TED
-                 Circles. This annual event showcases groundbreaking ideas from diverse speakers, focusing on science, technology, 
-                 arts, culture, and social issues. Combining TEDTalks, live speakers, workshops, and networking, it inspires innovation,
-                  fosters community, and sparks meaningful discussions. An unmissable experience for those seeking creativity and collaboration!
+                <b>TEDxKCMT</b>, hosted by Kristu Jyoti College of Management and Technology, is Kerala's first
+                institution to host TED
+                Circles. This annual event showcases groundbreaking ideas from diverse speakers, focusing on science,
+                technology,
+                arts, culture, and social issues. Combining TEDTalks, live speakers, workshops, and networking, it
+                inspires innovation,
+                fosters community, and sparks meaningful discussions. An unmissable experience for those seeking
+                creativity and collaboration!
             </p>
         </div>
     </div>
-    
+
+    <img id="backToTop" class="btn btn-danger shadow" src="Slider Images/—Pngtree—vector up arrow icon_4233280.png"
+        style="position: fixed; bottom: 20px; right: 20px; display: none; width: 40px; height: 40px; font-size: 20px; ">
+
+
+
     <!-- Contact Section -->
     <div class="contact-us" id="contact-us-section">
         <h2 class="contact-us-h1">Contact <span class="ted">Us</span></h2>
-        <p class="contact-us-para">We'd love to hear from you! Connect with us on our social media platforms or drop us an email.</p>
-    
+        <p class="contact-us-para">We'd love to hear from you! Connect with us on our social media platforms or drop us
+            an email.</p>
+
         <!-- Social Media Icons -->
         <div class="social-icons">
-            <a href="https://www.instagram.com/tedxkcmtofficial/" target="_blank" aria-label="Visit TEDxKCMT Instagram page">
+            <a href="https://www.instagram.com/tedxkcmtofficial/" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/hashtag/tedxkcmt/" target="_blank" aria-label="Visit TEDxKCMT Facebook page">
+            <a href="https://www.facebook.com/hashtag/tedxkcmt/" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.linkedin.com/company/tedxkcmt/posts/?feedView=all" target="_blank" aria-label="Visit TEDxKCMT LinkedIn page">
+            <a href="https://www.linkedin.com/company/tedxkcmt/posts/?feedView=all" target="_blank"
+                aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://x.com/tedxkcmt" target="_blank" aria-label="Vist our TEDxKCMT Twitter page">
+            <a href="https://x.com/tedxkcmt" target="_blank" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
         </div>
-        <a class="email" href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tedxkcmt@gmail.com&su=TEDx Inquiry&body=Hello, I would like to know more about Tedxkcmt." target="_blank">
+        <a class="email"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tedxkcmt@gmail.com&su=TEDx Inquiry&body=Hello, I would like to know more about Tedxkcmt."
+            target="_blank">
             <p>Email: info.tedxkcmt@gmail.com</p>
         </a>
-        <div class="location">   
-            <a href="https://www.google.com/maps/dir//FG6X%2BR48+Kristu+Jyoti+College+of+Management+and+Technology,+Chethipuzha+Kadavu,+Changanassery,+Kerala+686104,+India/@9.4620281,76.4654263,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b0625fed0fbdc3d:0x92d3856e6404922e!2m2!1d76.5478282!2d9.4620377?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D">
-                <img  class="location-img" src="Images/location.jpg"  alt="Location icon">
+        <a
+            href="https://www.google.com/maps/dir//FG6X%2BR48+Kristu+Jyoti+College+of+Management+and+Technology,+Chethipuzha+Kadavu,+Changanassery,+Kerala+686104,+India/@9.4620281,76.4654263,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b0625fed0fbdc3d:0x92d3856e6404922e!2m2!1d76.5478282!2d9.4620377?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D">
+            <center><img class="location-img" src="Images/location.jpg" alt="">
                 <h1 class="location-h1">Location</h1>
-            </a>
-        </div>
+            </center>
+        </a>
     </div>
-    
+
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 TEDxKCMT.</p>
-      </footer>
+        <center>© 2025 TEDxKCMT</center>
+    </footer>
 
-    <!-- Link to Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon='{"rayId":"91a059458d521194","version":"2025.1.0","r":1,"token":"e197edb359694d028d6de7159c4291a5","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
+        crossorigin="anonymous">
+        </script>
+
+    <script src="smoothing.js"></script>
+    <script src="sliderandothers.js"></script>
 </body>
+
 </html>
