@@ -6,7 +6,8 @@ const imageUrls = [
     "./Slider Images/Gokul Bijuraj.jpg",
     "./Slider Images/Rythom.jpg",
     "./Slider Images/Sue Ann.jpg",
-    "./Slider Images/The Baby Jean.jpg"
+    "./Slider Images/The Baby Jean.jpg",
+    "./Slider Images/Riya Shibu.png"
 ];
 
 const slider = document.getElementById("imageSlider");
