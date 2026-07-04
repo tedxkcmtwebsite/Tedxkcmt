@@ -1,0 +1,599 @@
+/* TEDxKCMT 2026 - ETHEREAL
+   Starter redesigned stylesheet.
+   Replace your tedx.css with this file and adjust section-specific
+   selectors as needed for remaining pages.
+*/
+
+:root{
+  --bg:#050505;
+  --surface:#101010;
+  --surface-2:#181818;
+  --text:#f5f5f5;
+  --muted:#b8b8b8;
+  --ted:#EB0028;
+  --gold:#ede8e8;
+  --radius:18px;
+  --shadow:0 12px 40px rgba(0,0,0,.45);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Poppins,sans-serif;
+  line-height:1.7;
+}
+
+.container{width:min(1180px,92%);margin:auto}
+
+/* NAVBAR */
+.header{
+ position:fixed;top:0;left:0;width:100%;z-index:1000;
+ background:rgba(5,5,5,.72);
+ backdrop-filter:blur(14px);
+ border-bottom:1px solid rgba(255,255,255,.08);
+}
+.navbar{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:18px 0;
+}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{
+ color:var(--text);
+ text-decoration:none;
+ transition:.3s;
+}
+.nav-links a:hover{color:var(--gold)}
+
+.top-button,.cta-button{
+ display:inline-block;
+ padding:14px 34px;
+ border-radius:999px;
+ text-decoration:none;
+ font-weight:600;
+ background:linear-gradient(135deg,#EB0028,#ff5c46);
+ color:#fff;
+ box-shadow:0 10px 25px rgba(235,0,40,.3);
+ transition:.35s;
+}
+.top-button:hover,.cta-button:hover{
+ transform:translateY(-3px);
+ box-shadow:0 16px 35px rgba(235,0,40,.45);
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.85)
+    ),
+    url("Images/Bg.webp");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    padding:120px 20px 80px;
+    position:relative;
+    overflow:hidden;
+}
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at center,
+
+rgba(255,255,255,.08),
+
+transparent 65%);
+
+pointer-events:none;
+
+}
+.hero-title{
+    font-size:clamp(80px,10vw,170px);
+    font-family:poppins-black;
+    font-weight:900;
+    line-height:.9;
+    letter-spacing:-4px;
+    color:white;
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 25px rgba(255,255,255,.12);
+
+    animation:move2 1.5s ease;
+}
+.hero-title span{
+    color:#EB0028;
+
+    text-shadow:
+    0 0 40px rgba(235,0,40,.45);
+}
+
+.hero-subtitle{
+
+    font-size:28px;
+
+    color:#E8E8E8;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    line-height:1.7;
+
+    font-weight:300;
+
+    letter-spacing:1px;
+}
+.cta-button{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin-top:35px;
+
+padding:18px 42px;
+
+border-radius:60px;
+
+background:#EB0028;
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+letter-spacing:.5px;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:
+0 0 25px rgba(235,0,40,.35);
+
+}
+.cta-button:hover{
+
+transform:translateY(-5px);
+
+background:#ff2d55;
+
+box-shadow:
+0 0 45px rgba(235,0,40,.7);
+
+}
+
+.ethereal{
+ display:block;
+ margin-top:18px;
+ color:var(--gold);
+ letter-spacing:8px;
+ text-transform:uppercase;
+ font-size:clamp(1rem,2vw,1.35rem);
+}
+.scroll-p{
+
+font-size:18px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#BFBFBF;
+
+margin-top:70px;
+
+}
+.scroll-icon{
+
+font-size:36px;
+
+color:#EB0028;
+
+animation:bounce 2s infinite;
+
+margin-top:10px;
+
+}
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+}
+
+}
+
+/* Generic Sections */
+section{padding:110px 0}
+.card{
+ background:var(--surface);
+ border:1px solid rgba(255,255,255,.08);
+ border-radius:var(--radius);
+ box-shadow:var(--shadow);
+ padding:40px;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-6px);
+ border-color:rgba(217,179,106,.4);
+}
+
+img{
+ max-width:100%;
+ border-radius:16px;
+ transition:.4s;
+}
+img:hover{transform:scale(1.03)}
+
+h2{
+ font-size:clamp(2rem,4vw,3rem);
+ margin-bottom:20px;
+}
+p{color:var(--muted)}
+
+.footer{
+ text-align:center;
+ padding:45px 20px;
+ border-top:1px solid rgba(255,255,255,.08);
+ color:#888;
+}
+
+/* Speaker reveal cards */
+.speaker-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:30px;
+}
+.speaker-card{
+ background:var(--surface);
+ border-radius:20px;
+ overflow:hidden;
+ border:1px solid rgba(255,255,255,.08);
+ transition:.35s;
+}
+.speaker-card:hover{
+ transform:translateY(-8px);
+}
+.speaker-card h3{
+ padding:18px;
+}
+.speaker-card p{
+ padding:0 18px 22px;
+}
+
+@media (max-width:768px){
+ .nav-links{gap:14px;font-size:.9rem;flex-wrap:wrap;justify-content:center}
+ .hero{padding-top:140px}
+ .hero-title{font-size:4rem}
+ .hero-subtitle{font-size:1.1rem}
+ section{padding:70px 0}
+}
+/* HERO BACKGROUND */
+
+.hero{
+
+    animation:heroZoom 8s ease-out forwards;
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        background-size:110%;
+
+    }
+
+    to{
+
+        background-size:100%;
+
+    }
+
+}
+.hero-title{
+
+    opacity:0;
+
+    animation:titleReveal 1.4s cubic-bezier(.16,1,.3,1) forwards;
+
+}
+
+@keyframes titleReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(70px) scale(.95);
+
+        filter:blur(10px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+.hero-title span{
+
+    display:inline-block;
+
+    animation:redGlow 2.5s ease forwards;
+
+    animation-delay:.6s;
+
+}
+
+@keyframes redGlow{
+
+    0%{
+
+        color:#EB0028;
+
+        text-shadow:none;
+
+    }
+
+    100%{
+
+        color:#EB0028;
+
+        text-shadow:
+
+        0 0 15px rgba(235,0,40,.6),
+
+        0 0 35px rgba(235,0,40,.35),
+
+        0 0 55px rgba(235,0,40,.18);
+
+    }
+
+}
+.hero-subtitle{
+
+    opacity:0;
+
+    animation:subtitleReveal 1s ease forwards;
+
+    animation-delay:1s;
+
+}
+
+@keyframes subtitleReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.cta-button{
+
+    opacity:0;
+
+    animation:buttonReveal .9s ease forwards;
+
+    animation-delay:1.5s;
+
+}
+
+@keyframes buttonReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.header{
+
+    animation:navReveal .8s ease forwards;
+
+}
+
+@keyframes navReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        rgba(255,255,255,.06),
+
+        transparent 70%
+
+    );
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    animation:glowFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes glowFloat{
+
+    0%,100%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.08);
+
+    }
+
+}
+.cta-button{
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s,
+
+    background .35s;
+
+}
+
+.cta-button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(230,43,30,.35);
+
+}
+.nav-elements{
+
+    position:relative;
+
+}
+
+.nav-elements::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:50%;
+
+    width:0;
+
+    height:2px;
+
+    background:#EB0028;
+
+    transition:.35s;
+
+    transform:translateX(-50%);
+
+}
+
+.nav-elements:hover::after{
+
+    width:100%;
+
+}
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
